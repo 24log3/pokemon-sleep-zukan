@@ -157,6 +157,12 @@ select {
   color: #1c2ec9;
 }
 
+.specialty-オール {
+  background-color: #ff8080; /* やさしい黄色 */
+  color: #ad0505;
+}
+
+
 /* 睡眠タイプごとの色分け */
 .sleep-うとうと {
   background-color: #ffe89c; /* やさしい黄色 */
