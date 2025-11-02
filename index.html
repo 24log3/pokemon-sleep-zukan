@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ポケモンスリープ 図鑑</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>ポケモンスリープ 図鑑</h1>
+
+  <div class="filters">
+    <input type="text" id="nameSearch" placeholder="名前で検索" />
+    
+    <select id="typeFilter">
+      <option value="">タイプで絞り込み</option>
+      <option value="ノーマル">ノーマル</option>
+      <option value="ほのお">ほのお</option>
+      <option value="みず">みず</option>
+      <option value="でんき">でんき</option>
+      <option value="くさ">くさ</option>
+      <option value="こおり">こおり</option>
+      <option value="かくとう">かくとう</option>
+      <option value="どく">どく</option>
+      <option value="じめん">じめん</option>
+      <option value="ひこう">ひこう</option>
+      <option value="エスパー">エスパー</option>
+      <option value="むし">むし</option>
+      <option value="いわ">いわ</option>
+      <option value="ゴースト">ゴースト</option>
+      <option value="ドラゴン">ドラゴン</option>
+      <option value="あく">あく</option>
+      <option value="はがね">はがね</option>
+      <option value="フェアリー">フェアリー</option>
+      <!-- 必要に応じて追加 -->
+    </select>
+
+    <select id="ingredientFilter">
+      <option value="">食材で絞り込み</option>
+      <option value="ふといながねぎ">ふといながねぎ</option>
+      <option value="あじわいキノコ">あじわいキノコ</option>
+      <option value="とくせんエッグ">とくせんエッグ</option>
+      <option value="ほっこりポテト">ほっこりポテト</option>
+      <option value="とくせんリンゴ">とくせんリンゴ</option>
+      <option value="げきからハーブ">げきからハーブ</option>
+      <option value="マメミート">マメミート</option>
+      <option value="モーモーミルク">モーモーミルク</option>
+      <option value="あまいミツ">あまいミツ</option>
+      <option value="ピュアなオイル">ピュアなオイル</option>
+      <option value="あったかジンジャー">あったかジンジャー</option>
+      <option value="あんみんトマト">あんみんトマト</option>
+      <option value="リラックスカカオ">リラックスカカオ</option>
+      <option value="おいしいシッポ">おいしいシッポ</option>
+      <option value="ワカクサ大豆">ワカクサ大豆</option>
+      <option value="ワカクサコーン">ワカクサコーン</option>
+      <option value="めざましコーヒー">めざましコーヒー</option>
+      <option value="ずっしりかぼちゃ">ずっしりかぼちゃ</option>
+      <!-- 必要に応じて追加 -->
+    </select>
+
+    <select id="specialtyFilter">
+      <option value="">とくいで絞り込み</option>
+      <option value="食材">食材</option>
+      <option value="きのみ">きのみ</option>
+      <option value="スキル">スキル</option>
+      <!-- 必要に応じて追加 -->
+    </select>
+
+    <select id="sleepTypeFilter">
+      <option value="">睡眠タイプで絞り込み</option>
+      <option value="うとうと">うとうと</option>
+      <option value="すやすや">すやすや</option>
+      <option value="ぐっすり">ぐっすり</option>
+    </select>
+
+  </div>
+
+  <div id="pokemonList" class="list"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

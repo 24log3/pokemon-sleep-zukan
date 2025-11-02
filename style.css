@@ -1,0 +1,123 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+select {
+  margin: 5px;
+  padding: 8px;
+  font-size: 16px;
+}
+
+#nameSearch {
+  margin: 20px;
+  padding: 8px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 220px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.type-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.berry-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+
+.ingredient-images {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.ingredient-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.sleep-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.specialty-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+/*とくいごとの色分け*/
+.specialty-きのみ {
+  background-color: #6eff6e; /* やさしい黄色 */
+  color: #006411;
+}
+
+.specialty-食材 {
+  background-color: #ffd95b; /* やさしい黄色 */
+  color: #856404;
+}
+
+.specialty-スキル {
+  background-color: #9ce8ff; /* やさしい黄色 */
+  color: #1c2ec9;
+}
+
+/* 睡眠タイプごとの色分け */
+.sleep-うとうと {
+  background-color: #ffe89c; /* やさしい黄色 */
+  color: #856404;
+}
+
+.sleep-すやすや {
+  background-color: #bbffff; /* やさしい青 */
+  color: #0c5460;
+}
+
+.sleep-ぐっすり {
+  background-color: #6ea9ec; /* やさしい緑 */
+  color: #080bb1;
+}
+
