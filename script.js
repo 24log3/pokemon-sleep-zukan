@@ -8,12 +8,13 @@ const specialtyFilter = document.getElementById("specialtyFilter");
 const pokemonList = document.getElementById("pokemonList");
 const sleepTypeFilter = document.getElementById("sleepTypeFilter");
 const nameSearch = document.getElementById("nameSearch");
+const evolutionFilter = document.getElementById("evolutionFilter");
 
 function parseCSV(text) {
   const lines = text.trim().split("\n").filter(line => line.trim() !== "");
   const headers = lines[0].split(",");
   return lines.slice(1).map(line => {
-    const values = line.split(",");
+    const values = line.split(",").slice(0, headers.length + 1);
     return {
       number: values[headers.indexOf("図鑑No.")]?.trim() || "",
       name: values[headers.indexOf("名前")]?.trim() || "",
@@ -24,7 +25,8 @@ function parseCSV(text) {
         values[headers.indexOf("第2食材")]?.trim() || "",
         values[headers.indexOf("第3食材")]?.trim() || ""
       ],
-      sleepType: values[headers.indexOf("睡眠タイプ")]?.trim() || ""
+      sleepType: values[headers.indexOf("睡眠タイプ")]?.trim() || "",
+      evolution: (values[headers.indexOf("進化段階")] || "").trim().replace(/[^0-9]/g, "")
     };
   });
 }
@@ -114,13 +116,22 @@ function renderList() {
   const specialty = specialtyFilter.value;
   const sleepType = sleepTypeFilter.value;
   const nameKeyword = toHiragana(nameSearch.value.trim());
+  const evolution = evolutionFilter.value;
+
+//console.log("evolutionFilter:", evolution);
+// console.log("進化段階一覧:", pokemons.map(p => `${p.name}: [${p.evolution}]`));
 
   const filtered = pokemons.filter(p => {
+    const matchesEvolution =
+    !evolution ||
+    (evolution === "final" && p.evolution === "1");
+
     return (!nameKeyword || toHiragana(p.name).includes(nameKeyword)) &&
       (!type || p.type === type) &&
       (!ingredient || p.ingredient.includes(ingredient)) &&
       (!specialty || p.specialty === specialty) &&
-      (!sleepType || p.sleepType === sleepType);
+      (!sleepType || p.sleepType === sleepType) &&
+      matchesEvolution;
   });
 
   pokemonList.innerHTML = "";
@@ -165,5 +176,6 @@ ingredientFilter.addEventListener("change", renderList);
 specialtyFilter.addEventListener("change", renderList);
 sleepTypeFilter.addEventListener("change", renderList);
 nameSearch.addEventListener("input", renderList);
+evolutionFilter.addEventListener("change", renderList);
 
 loadPokemonData();
