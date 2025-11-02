@@ -50,8 +50,15 @@ select {
   padding: 10px;
 }
 @media screen and (max-width: 480px) {
-  .list {
-    grid-template-columns: repeat(3, 1fr);
+  .filters {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  select,
+  #nameSearch {
+    width: 90%;
+    max-width: 300px;
   }
 }
 
