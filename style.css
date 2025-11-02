@@ -27,19 +27,40 @@ select {
 }
 
 .list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 10px;
+}
+@media screen and (max-width: 480px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  padding: 10px;
+}
+
+/* スマホサイズのときは3列に固定 */
+@media screen and (max-width: 480px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .card {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
-  width: 220px;
   margin: 10px;
   padding: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  width: 100%; /* ← ここを追加または変更 */
+  box-sizing: border-box;
 }
 
 .type-icon {
