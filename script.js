@@ -98,7 +98,8 @@ function ingredientToImageName(name) {
     "ワカクサコーン": "wakakusacorn.png",
     "めざましコーヒー": "mezamashicoffee.png",
     "ずっしりかぼちゃ": "zushirikabocha.png",
-    "あんみんトマト": "anmintomato.png"
+    "あんみんトマト": "anmintomato.png",
+    "つやつやアボカド": "tuyatuyaabokado.png"
   };
   return map[name] || "default.png";
 }
