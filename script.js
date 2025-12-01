@@ -26,7 +26,7 @@ function parseCSV(text) {
         values[headers.indexOf("第2食材")]?.trim() || "",
         values[headers.indexOf("第3食材")]?.trim() || ""
       ],
-      skill: (values[headers.indexOf("メインスキル")] || "").trim().replace(/[^0-9]/g, ""),
+      skill: values[headers.indexOf("メインスキル")]?.trim() || "",
       sleepType: values[headers.indexOf("睡眠タイプ")]?.trim() || "",
       evolution: (values[headers.indexOf("進化段階")] || "").trim().replace(/[^0-9]/g, "")
     };
