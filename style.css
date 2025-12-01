@@ -54,20 +54,6 @@ select {
   gap: 16px;
   padding: 10px;
 }
-@media screen and (max-width: 480px) {
-  .filters {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  select,
-  #nameSearch {
-    width: 90%;
-    max-width: 300px;
-    margin: 5px auto;
-  }
-}
 
 .pokemon-grid {
   display: grid;

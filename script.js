@@ -9,6 +9,7 @@ const pokemonList = document.getElementById("pokemonList");
 const sleepTypeFilter = document.getElementById("sleepTypeFilter");
 const nameSearch = document.getElementById("nameSearch");
 const evolutionFilter = document.getElementById("evolutionFilter");
+const skillFilter = document.getElementById("skillFilter");
 
 function parseCSV(text) {
   const lines = text.trim().split("\n").filter(line => line.trim() !== "");
@@ -25,6 +26,7 @@ function parseCSV(text) {
         values[headers.indexOf("第2食材")]?.trim() || "",
         values[headers.indexOf("第3食材")]?.trim() || ""
       ],
+      skill: (values[headers.indexOf("メインスキル")] || "").trim().replace(/[^0-9]/g, ""),
       sleepType: values[headers.indexOf("睡眠タイプ")]?.trim() || "",
       evolution: (values[headers.indexOf("進化段階")] || "").trim().replace(/[^0-9]/g, "")
     };
@@ -115,6 +117,7 @@ function renderList() {
   const type = typeFilter.value;
   const ingredient = ingredientFilter.value;
   const specialty = specialtyFilter.value;
+  const skill = skillFilter.value;
   const sleepType = sleepTypeFilter.value;
   const nameKeyword = toHiragana(nameSearch.value.trim());
   const evolution = evolutionFilter.value;
@@ -131,6 +134,7 @@ function renderList() {
       (!type || p.type === type) &&
       (!ingredient || p.ingredient.includes(ingredient)) &&
       (!specialty || p.specialty === specialty) &&
+      (!skill || p.specialty === skill) &&
       (!sleepType || p.sleepType === sleepType) &&
       matchesEvolution;
   });
@@ -152,6 +156,7 @@ function renderList() {
             <img src="images/ingredients/${ingredientToImageName(name)}" alt="${name}" class="ingredient-icon" />
         `).join("")}
       </div>
+      <p>睡眠タイプ: <span class="skill-badge sleep-${p.skill}">${p.skill}</span></p>
       <p>とくい: <span class="specialty-badge specialty-${p.specialty}">${p.specialty}</span></p>
       <p>睡眠タイプ: <span class="sleep-badge sleep-${p.sleepType}">${p.sleepType}</span></p>
     `;
@@ -178,5 +183,6 @@ specialtyFilter.addEventListener("change", renderList);
 sleepTypeFilter.addEventListener("change", renderList);
 nameSearch.addEventListener("input", renderList);
 evolutionFilter.addEventListener("change", renderList);
+skillFilter.addEventListener("change", renderList);
 
 loadPokemonData();
