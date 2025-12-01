@@ -134,7 +134,7 @@ function renderList() {
       (!type || p.type === type) &&
       (!ingredient || p.ingredient.includes(ingredient)) &&
       (!specialty || p.specialty === specialty) &&
-      (!skill || p.specialty === skill) &&
+      (!skill || p.skill === skill) &&
       (!sleepType || p.sleepType === sleepType) &&
       matchesEvolution;
   });
