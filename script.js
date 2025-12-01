@@ -158,7 +158,8 @@ console.log("メインスキル一覧:", pokemons.map(p => `${p.name}: [${p.skil
             <img src="images/ingredients/${ingredientToImageName(name)}" alt="${name}" class="ingredient-icon" />
         `).join("")}
       </div>
-      <p>メインスキル: <span class="skill-badge skill-${p.skill}">${p.skill}</span></p>
+      <p>メインスキル<p>
+      <p><span class="skill-badge skill-${p.skill}">${p.skill}</span></p>
       <p>とくい: <span class="specialty-badge specialty-${p.specialty}">${p.specialty}</span></p>
       <p>睡眠タイプ: <span class="sleep-badge sleep-${p.sleepType}">${p.sleepType}</span></p>
     `;
