@@ -124,6 +124,8 @@ function renderList() {
 
 //console.log("evolutionFilter:", evolution);
 // console.log("進化段階一覧:", pokemons.map(p => `${p.name}: [${p.evolution}]`));
+console.log("skillFilter:", skill);
+console.log("メインスキル一覧:", pokemons.map(p => `${p.name}: [${p.skill}]`));
 
   const filtered = pokemons.filter(p => {
     const matchesEvolution =
