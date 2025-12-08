@@ -136,7 +136,7 @@ console.log("メインスキル一覧:", pokemons.map(p => `${p.name}: [${p.skil
       (!type || p.type === type) &&
       (!ingredient || p.ingredient.includes(ingredient)) &&
       (!specialty || p.specialty === specialty) &&
-      (!skill || p.skill === skill) &&
+      (!skill || toHiragana(p.skill).includes(toHiragana(skill.trim()))) &&
       (!sleepType || p.sleepType === sleepType) &&
       matchesEvolution;
   });
