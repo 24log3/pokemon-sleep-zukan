@@ -19,22 +19,6 @@ h1 {
   text-align: center;
 }
 
-/* スマホサイズのときは filters を縦並び＆中央揃えに */
-@media screen and (max-width: 480px) {
-  .filters {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  select,
-  #nameSearch {
-    width: 90%;
-    max-width: 300px;
-    margin: 5px auto;
-  }
-}
-
 select {
   margin: 5px;
   padding: 8px;
@@ -62,12 +46,6 @@ select {
   padding: 10px;
 }
 
-/* スマホサイズのときは3列に固定 */
-@media screen and (max-width: 480px) {
-  .pokemon-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 
 .card {
   background-color: #fff;
@@ -168,5 +146,29 @@ select {
 @media screen and (max-width: 480px) {
   .list {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* スマホサイズのときは3列に固定 */
+@media screen and (max-width: 480px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* スマホサイズのときは filters を縦並び＆中央揃えに */
+@media screen and (max-width: 480px) {
+  .filters {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  select,
+  #nameSearch {
+    width: 90%;
+    max-width: 300px;
+    margin: 5px auto;
   }
 }
