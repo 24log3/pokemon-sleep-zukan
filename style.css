@@ -47,6 +47,8 @@ select {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 12px;
   padding: 10px;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 
@@ -54,12 +56,12 @@ select {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
-  margin: 10px;
   padding: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
   width: 100%;
   box-sizing: border-box;
 }
+
 
 .type-icon {
   width: 40px;
@@ -147,14 +149,15 @@ select {
 }
 
 @media screen and (max-width: 480px) {
+
+  
   .list {
     grid-template-columns: repeat(3, 1fr);
   }
-}
 
 
 /* スマホサイズのときは filters を縦並び＆中央揃えに */
-@media screen and (max-width: 480px) {
+
   .filters {
     flex-direction: column;
     align-items: center;
@@ -167,11 +170,17 @@ select {
     max-width: 300px;
     margin: 5px auto;
   }
-}
+
 
 /* スマホサイズのときは3列に固定 */
-@media screen and (max-width: 480px) {
+
   .pokemon-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+
+
+  .pokemon-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
