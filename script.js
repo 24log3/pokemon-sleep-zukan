@@ -121,7 +121,7 @@ function renderList() {
   const skill = skillFilter.value;
   const sleepType = sleepTypeFilter.value;
   const nameKeyword = toHiragana(nameSearch.value.trim());
-  const evolution = evolutionFilter.value;
+  const evolution = evolutionFilter.value = "1";
 
 //console.log("evolutionFilter:", evolution);
 // console.log("進化段階一覧:", pokemons.map(p => `${p.name}: [${p.evolution}]`));
