@@ -205,4 +205,8 @@ select {
     max-width: 90px;
   }
 
+  .ingredient-icon{
+    max-width: 50px;
+  }
+
 }
