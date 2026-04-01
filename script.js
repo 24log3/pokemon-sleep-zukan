@@ -173,6 +173,7 @@ function loadPokemonData() {
     .then(response => response.text())
     .then(csvText => {
       pokemons = parseCSV(csvText);
+      evolutionFilter.value = "final";
       renderList();
     })
     .catch(error => {
