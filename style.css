@@ -49,11 +49,6 @@ select {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
   padding: 16px;
-
-  /* 最大8列 */
-  max-width: calc(260px * 8 + 16px * 7);
-
-  margin: 0 auto;
 }
 
 
