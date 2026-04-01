@@ -55,7 +55,9 @@ select {
   gap: 12px;
   padding: 10px;
   max-width: 100%;
+  max-width: 1400px;   /* ← 超重要 */
   margin: 0 auto;
+
 }
 
 .pokemon-image {
