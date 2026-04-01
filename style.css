@@ -58,7 +58,7 @@ select {
   display: grid;
 
   /* ✅ 縦スクロールの基本形 */
-  grid-template-columns: repeat(2, 1fr); /* 2列 */
+  grid-template-columns: repeat(8 auto, 1fr); /* 2列 */
 
   /* 列が勝手に縮まないように */
   align-items: stretch;
