@@ -20,20 +20,17 @@ h1 {
 }
 
 select {
-  margin: 5px auto;
+  margin: 5px;
   padding: 8px;
   font-size: 16px;
 }
 
-
 #nameSearch {
+  margin: 20px;
   padding: 8px;
   font-size: 16px;
   width: 200px;
-  margin: 20px auto;
-  display: block;
 }
-
 
 .list {
   display: grid;
@@ -42,39 +39,11 @@ select {
   padding: 10px;
 }
 
-
-
-.pokemon-name {
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-.card p {
-  font-size: 0.95rem;
-}
-
-
 .pokemon-grid {
   display: grid;
-
-  /* ✅ 縦スクロールの基本形 */
-  grid-template-columns: repeat(8 auto, 1fr); /* 2列 */
-
-
-
-  gap: 24px;
-  padding: 24px;
-
-  width: 100%;
-}
-
-
-
-.pokemon-image {
-  width: 100%;
-  max-width: 160px;   /* ← 超重要 */
-  display: block;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  padding: 10px;
 }
 
 
@@ -82,12 +51,12 @@ select {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
-  padding: 16px;
+  margin: 10px;
+  padding: 10px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-  width: auto;
+  width: 100%; /* ← ここを追加または変更 */
   box-sizing: border-box;
 }
-
 
 .type-icon {
   width: 40px;
@@ -108,16 +77,14 @@ select {
 .ingredient-images {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 16px;
-  
+  gap: 6px;
+  margin-bottom: 8px;
 }
 
 .ingredient-icon {
   width: 48px;
   height: 48px;
   object-fit: contain;
-  display: flex;
 }
 
 .sleep-badge {
@@ -176,25 +143,32 @@ select {
   color: #080bb1;
 }
 
+@media screen and (max-width: 480px) {
+  .list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
+
+/* スマホサイズのときは filters を縦並び＆中央揃えに */
+@media screen and (max-width: 480px) {
+  .filters {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  select,
+  #nameSearch {
+    width: 90%;
+    max-width: 300px;
+    margin: 5px auto;
+  }
+}
+
+/* スマホサイズのときは3列に固定 */
 @media screen and (max-width: 480px) {
   .pokemon-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 6px;
-    padding: 6px;
-  }
-
-  .pokemon-image {
-    max-width: 90px;
-  }
-
-  .ingredient-icon {
-    width: 30px;
-    height: 30px;
-  }
-
-  .pokemon-name {
-    font-size: 0.9rem;
-    font-weight: normal;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
