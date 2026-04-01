@@ -222,5 +222,12 @@ select {
   .ingredient-images{
     max-width: 50px;
   }
+  
+  .pokemon-name {
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin: 4px 0;
+  }
+
 
 }
