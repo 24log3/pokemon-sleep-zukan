@@ -54,9 +54,7 @@ select {
   display: grid;
 
   /* 最大8列・最小カード幅220px */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(220px, 1fr)
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)
   );
 
   gap: 16px;
@@ -67,6 +65,15 @@ select {
 
   margin: 0 auto;
 }
+
+@media screen and (max-width: 480px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    padding: 6px;
+  }
+}
+
 
 
 .pokemon-image {
@@ -213,13 +220,6 @@ select {
 
 
 /* スマホサイズのときは3列に固定 */
-
-
-  .pokemon-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 6px;
-    padding: 6px;
-  }
   
   .pokemon-image {
     max-width: 90px;
