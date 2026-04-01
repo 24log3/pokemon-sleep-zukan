@@ -213,10 +213,12 @@ select {
     max-width: 90px;
   }
 
-  .ingredient-icon{
+  .ingredient-icon {
+    width: 6px;
+    height: 48px;
+    object-fit: contain;
     max-width: 50px;
   }
-
   .ingredient-images{
     max-width: 50px;
   }
