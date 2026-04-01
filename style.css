@@ -164,6 +164,19 @@ select {
 }
 
 @media screen and (max-width: 480px) {
+  
+.pokemon-image {
+  width: 100%;
+  max-width: 96px;   /* ← ここが重要（90〜100推奨） */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.card {
+  min-width: 0;      /* ← Safari対策 */
+  padding: 8px;      /* 少し詰める */
+}
 
   
   .list {
@@ -192,8 +205,8 @@ select {
 
   .pokemon-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
-    padding: 8px;
+    gap: 6px;
+    padding: 6px;
   }
   
   .pokemon-image {
