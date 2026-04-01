@@ -217,4 +217,8 @@ select {
     max-width: 50px;
   }
 
+  .ingredient-images{
+    max-width: 50px;
+  }
+
 }
