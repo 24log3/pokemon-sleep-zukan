@@ -148,7 +148,7 @@ console.log("メインスキル一覧:", pokemons.map(p => `${p.name}: [${p.skil
     card.className = "card";
     card.innerHTML = `
       <img src="images/pokemon/${String(p.number).padStart(4, '0')}.png" alt="${p.name}" class="pokemon-image" />
-      <h3 class="pokemon-name">${p.name}</h3>
+      <h3>${p.name}</h3>
       <p>タイプ: <img src="images/types/${typeToImageName(p.type)}" alt="${p.type}" class="type-icon" /></p>
       <p>きのみ: <img src="images/berries/${typeToBerryImageName(p.type)}" alt="${p.type}のきのみ" class="berry-icon" /></p>
       <p>食材</p>
@@ -173,7 +173,6 @@ function loadPokemonData() {
     .then(response => response.text())
     .then(csvText => {
       pokemons = parseCSV(csvText);
-      evolutionFilter.value = "final";
       renderList();
     })
     .catch(error => {
