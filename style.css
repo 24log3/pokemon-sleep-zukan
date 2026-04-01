@@ -49,16 +49,25 @@ select {
   padding: 10px;
 }
 
+
 .pokemon-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 12px;
-  padding: 10px;
-  max-width: 100%;
-  max-width: 1400px;   /* ← 超重要 */
-  margin: 0 auto;
 
+  /* 最大8列・最小カード幅220px */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  );
+
+  gap: 16px;
+  padding: 16px;
+
+  max-width: calc(220px * 8 + 16px * 7);
+  /* 8列分 + gap 7個 */
+
+  margin: 0 auto;
 }
+
 
 .pokemon-image {
   width: 100%;
