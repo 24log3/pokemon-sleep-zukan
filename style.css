@@ -191,12 +191,14 @@ select {
     display: block;
     margin: 0 auto;
   }
-
-.card {
-  min-width: 0;      /* ← Safari対策 */
-  padding: 8px;      /* 少し詰める */
 }
-
+@media screen and (max-width: 480px) {
+  .card {
+    min-width: 0;      /* ← Safari対策 */
+    padding: 8px;      /* 少し詰める */
+  }
+}
+@media screen and (max-width: 480px) {
   
   .list {
     grid-template-columns: repeat(3, 1fr);
@@ -204,13 +206,15 @@ select {
 
 
 /* スマホサイズのときは filters を縦並び＆中央揃えに */
-
+}
+@media screen and (max-width: 480px) {
   .filters {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-
+}
+@media screen and (max-width: 480px) {
   select,
   #nameSearch {
     width: 90%;
@@ -218,19 +222,23 @@ select {
     margin: 5px auto;
   }
 
-
+}
+@media screen and (max-width: 480px) {
 /* スマホサイズのときは3列に固定 */
-  
+  }
+@media screen and (max-width: 480px) {
   .pokemon-image {
     max-width: 90px;
   }
-
+}
+@media screen and (max-width: 480px) {
   .ingredient-icon {
     width: 30px;
     height: 30px;
     object-fit: center;
   }
-  
+}
+@media screen and (max-width: 480px) {
   .pokemon-name {
     font-size: 0.9rem;
     font-weight: normal;
