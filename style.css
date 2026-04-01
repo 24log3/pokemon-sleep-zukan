@@ -50,21 +50,19 @@ select {
 }
 
 
+
 .pokemon-grid {
   display: grid;
-
-  /* 最大8列・最小カード幅220px */
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)
-  );
-
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
   padding: 16px;
 
-  max-width: calc(220px * 8 + 16px * 7);
-  /* 8列分 + gap 7個 */
+  /* 最大8列 */
+  max-width: calc(260px * 8 + 16px * 7);
 
   margin: 0 auto;
 }
+
 
 @media screen and (max-width: 480px) {
   .pokemon-grid {
