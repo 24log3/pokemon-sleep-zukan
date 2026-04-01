@@ -60,8 +60,7 @@ select {
   /* ✅ 縦スクロールの基本形 */
   grid-template-columns: repeat(8 auto, 1fr); /* 2列 */
 
-  /* 列が勝手に縮まないように */
-  align-items: stretch;
+
 
   gap: 24px;
   padding: 24px;
