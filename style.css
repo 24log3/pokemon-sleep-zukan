@@ -44,17 +44,36 @@ select {
 
 
 
+.pokemon-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.card p {
+  font-size: 0.95rem;
+}
+
+
 .pokemon-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-  padding: 16px;
+
+  /* ✅ 縦スクロールの基本形 */
+  grid-template-columns: repeat(2, 1fr); /* 2列 */
+
+  /* 列が勝手に縮まないように */
+  align-items: stretch;
+
+  gap: 24px;
+  padding: 24px;
+
+  width: 100%;
 }
+
 
 
 .pokemon-image {
   width: 100%;
-  max-width: 400px;   /* ← 超重要 */
+  max-width: 160px;   /* ← 超重要 */
   display: block;
   margin: 0 auto;
 }
@@ -64,7 +83,7 @@ select {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
-  padding: 10px;
+  padding: 16px;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
   width: auto;
   box-sizing: border-box;
@@ -92,6 +111,7 @@ select {
   justify-content: center;
   gap: 12px;
   margin-bottom: 16px;
+  
 }
 
 .ingredient-icon {
@@ -157,3 +177,25 @@ select {
   color: #080bb1;
 }
 
+
+@media screen and (max-width: 480px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .pokemon-image {
+    max-width: 90px;
+  }
+
+  .ingredient-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .pokemon-name {
+    font-size: 0.9rem;
+    font-weight: normal;
+  }
+}
