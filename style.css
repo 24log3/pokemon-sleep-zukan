@@ -144,14 +144,28 @@ select {
 }
 
 @media screen and (max-width: 480px) {
+  
+.pokemon-image {
+  width: 100%;
+  max-width: 96px;   /* ← ここが重要（90〜100推奨） */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.card {
+  min-width: 0;      /* ← Safari対策 */
+  padding: 8px;      /* 少し詰める */
+}
+
+  
   .list {
     grid-template-columns: repeat(3, 1fr);
   }
-}
 
 
 /* スマホサイズのときは filters を縦並び＆中央揃えに */
-@media screen and (max-width: 480px) {
+
   .filters {
     flex-direction: column;
     align-items: center;
@@ -164,11 +178,32 @@ select {
     max-width: 300px;
     margin: 5px auto;
   }
-}
+
 
 /* スマホサイズのときは3列に固定 */
-@media screen and (max-width: 480px) {
+
+
   .pokemon-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+    padding: 6px;
   }
+  
+  .pokemon-image {
+    max-width: 90px;
+  }
+
+  .ingredient-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: center;
+  }
+  
+  .pokemon-name {
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin: 4px 0;
+  }
+
+
 }
