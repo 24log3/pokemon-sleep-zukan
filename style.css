@@ -184,13 +184,13 @@ select {
 
 @media screen and (max-width: 480px) {
   
-.pokemon-image {
-  width: 100%;
-  max-width: 96px;   /* ← ここが重要（90〜100推奨） */
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
+  .pokemon-image {
+    width: 100%;
+    max-width: 96px;   /* ← ここが重要（90〜100推奨） */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
 
 .card {
   min-width: 0;      /* ← Safari対策 */
