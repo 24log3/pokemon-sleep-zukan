@@ -197,6 +197,7 @@ select {
     width: 30px;
     height: 30px;
     object-fit: center;
+    display: flex;
   }
   
   .pokemon-name {
