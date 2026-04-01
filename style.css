@@ -77,7 +77,6 @@ select {
 .pokemon-image {
   width: 100%;
   max-width: 220px;   /* ← 超重要 */
-  height: auto;
   display: block;
   margin: 0 auto;
 }
