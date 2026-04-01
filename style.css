@@ -52,16 +52,6 @@ select {
 }
 
 
-@media screen and (max-width: 480px) {
-  .pokemon-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 6px;
-    padding: 6px;
-  }
-}
-
-
-
 .pokemon-image {
   width: 100%;
   max-width: 220px;   /* ← 超重要 */
