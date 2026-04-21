@@ -1,4 +1,4 @@
-const CSV_URL = "data.csv";
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSSXIk0rX8jExw5jZPkAS7E0unWwIdO3LgSYNE5r75ItlgvPXt3dtnWfbK02-y92lfdjW-KffEg5vf_/pub?output=csv";
 
 let pokemons = [];
 
